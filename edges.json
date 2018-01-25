@@ -1,0 +1,19 @@
+{
+  "pipeline": {
+    "name": "edges"
+  },
+  "input": {
+    "atom": {
+      "glob": "/*",
+      "repo": "images"
+    }
+  },
+  "transform": {
+    "cmd": [ "python3", "/edges.py" ],
+    "image": "pachyderm/opencv"
+  },
+"parallelism_spec": {
+    "constant": 2
+  },
+  "enable_stats": true
+}
